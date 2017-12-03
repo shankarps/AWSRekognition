@@ -56,10 +56,6 @@ TODO
 * **Shankar P** - *Initial work* - [(https://github.com/shankarps)
 
 
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
-
 ## Acknowledgments
 
 * All image files in this project are from www.pexels.com/. They are used for non-commercial purposes.
