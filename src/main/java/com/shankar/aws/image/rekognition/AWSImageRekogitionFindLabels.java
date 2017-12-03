@@ -47,7 +47,7 @@ public class AWSImageRekogitionFindLabels {
 			e1.printStackTrace();
 		}
 
-		//get labels with 75% confidence.
+		// get labels with 75% confidence.
 		DetectLabelsRequest request = new DetectLabelsRequest().withImage(new Image().withBytes(bytes))
 				.withMaxLabels(10).withMinConfidence(75F);
 
@@ -57,15 +57,14 @@ public class AWSImageRekogitionFindLabels {
 
 			System.out.println("******** Labels for " + photo);
 			for (Label label : labels) {
-				System.out.println("Label: "+label.getName() + " , Confidence : " + label.getConfidence().toString());
+				System.out.println("Label: " + label.getName() + " , Confidence : " + label.getConfidence().toString());
 			}
-			
-			System.out.println("Finished the labels");
+
 		} catch (AmazonRekognitionException e) {
 			e.printStackTrace();
 		}
-		
-		//This is an important step. Close the client, else the Thread will not end!
+
+		// This is an important step. Close the client, else the Thread will not end!
 		rekognitionClient.shutdown();
 	}
 }
