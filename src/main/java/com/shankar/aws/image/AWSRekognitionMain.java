@@ -1,8 +1,7 @@
 package com.shankar.aws.image;
 
-import java.io.IOException;
-
 import com.shankar.aws.image.rekognition.AWSImageRekogitionFindLabels;
+import com.shankar.aws.image.rekognition.AWSImageRekogitionFindText;
 
 public class AWSRekognitionMain {
 	
@@ -11,6 +10,7 @@ public class AWSRekognitionMain {
 	public static void main(String[] args) throws Exception {
 		
 		AWSImageRekogitionFindLabels awsImageRekogitionFindLabels = new AWSImageRekogitionFindLabels();
+		AWSImageRekogitionFindText awsImageRekogitionFindText = new AWSImageRekogitionFindText(); 
 		
 		//check if name is provided in the arguments.
 		String photo = "audi.jpg";
@@ -19,7 +19,9 @@ public class AWSRekognitionMain {
 			photo = args[0];
 		}
 		
-		awsImageRekogitionFindLabels.process(filePath, photo);
+		//awsImageRekogitionFindLabels.process(filePath, photo);
+		awsImageRekogitionFindText.process(filePath, photo);
+		
 		
 	}
 
