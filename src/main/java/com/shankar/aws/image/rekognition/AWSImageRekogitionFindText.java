@@ -53,7 +53,7 @@ public class AWSImageRekogitionFindText {
          DetectTextResult result = rekognitionClient.detectText(request);
          List<TextDetection> textDetections = result.getTextDetections();
 
-         System.out.println("****Detected lines and words for " + photo);
+         System.out.println("Detected lines and words for " + photo);
          for (TextDetection text: textDetections) {
         	 
         	 //print parent words only. These have parent id == null.

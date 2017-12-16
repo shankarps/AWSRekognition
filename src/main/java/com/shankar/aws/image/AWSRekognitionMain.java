@@ -1,5 +1,6 @@
 package com.shankar.aws.image;
 
+import com.shankar.aws.image.rekognition.AWSImageRekogitionFindFaces;
 import com.shankar.aws.image.rekognition.AWSImageRekogitionFindLabels;
 import com.shankar.aws.image.rekognition.AWSImageRekogitionFindText;
 
@@ -11,7 +12,7 @@ public class AWSRekognitionMain {
 		
 		AWSImageRekogitionFindLabels awsImageRekogitionFindLabels = new AWSImageRekogitionFindLabels();
 		AWSImageRekogitionFindText awsImageRekogitionFindText = new AWSImageRekogitionFindText(); 
-		
+		AWSImageRekogitionFindFaces awsImageRekogitionFindFaces = new AWSImageRekogitionFindFaces();
 		//check if name is provided in the arguments.
 		String photo = "audi.jpg";
 		
@@ -20,8 +21,8 @@ public class AWSRekognitionMain {
 		}
 		
 		//awsImageRekogitionFindLabels.process(filePath, photo);
-		awsImageRekogitionFindText.process(filePath, photo);
-		
+		//awsImageRekogitionFindText.process(filePath, photo);
+		awsImageRekogitionFindFaces.process(filePath, photo);
 		
 	}
 
